@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular/build:application",
                     "options": {
-                        "outputPath": "dist/consysinf/browser",
+                        "outputPath": "dist/consysinf/browser/browser",
                         "browser": "src/main.ts",
                         "tsConfig": "tsconfig.app.json",
                         "assets": [
