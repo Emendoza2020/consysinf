@@ -1,0 +1,48 @@
+<header class="header" [class.scrolled]="isScrolled">
+
+    <div class="container">
+
+        <!-- LOGO -->
+        <div class="logo">E&M CONSYSINF</div>
+
+        <!-- MENU DESKTOP -->
+        <nav class="nav-desktop">
+            <a routerLink="/" fragment="home"><i class="fas fa-home"></i><span> Inicio</span></a>
+            <a routerLink="/" fragment="servicios"><i class="fas fa-briefcase"></i><span> Servicios</span></a>
+            <a routerLink="/" fragment="tecnologia"><i class="fas fa-laptop-code"></i><span> Tecnología</span></a>
+            <a routerLink="/" fragment="portafolio"><i class="fas fa-archive"></i><span> Portafolio</span></a>
+            <a routerLink="/" fragment="contacto"><i class="fas fa-envelope"></i><span> Contacto</span></a>
+            <a class="btn"><i class="fas fa-user-plus"></i><span> Login</span></a>
+        </nav>
+
+        <!-- HAMBURGUESA -->
+        <div class="menu-toggle" [class.open]="menuOpen" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+    <!-- OVERLAY -->
+    <div class="overlay" [class.active]="menuOpen" (click)="closeMenu()"></div>
+
+    <!-- MENU MOBILE -->
+    <div class="mobile-menu" [class.active]="menuOpen">
+
+        <!-- LOGO -->
+        <div class="mobile-logo">
+            <img src="assets/img/logo.png" alt="CONSYSINF">
+        </div>
+
+        <a routerLink="/" fragment="home" (click)="closeMenu()"><i class="fas fa-home"></i> Inicio</a>
+        <a routerLink="/" fragment="servicios" (click)="closeMenu()"><i class="fas fa-briefcase"></i> Servicios</a>
+        <a routerLink="/" fragment="tecnologia" (click)="closeMenu()"><i class="fas fa-laptop-code"></i> Tecnología</a>
+        <a routerLink="/" fragment="portafolio" (click)="closeMenu()"><i class="fas fa-archive"></i> Portafolio</a>
+        <a routerLink="/" fragment="contacto" (click)="closeMenu()"><i class="fas fa-envelope"></i> Contacto</a>
+
+        <a class="btn"><i class="fas fa-user-plus"></i> Login</a>
+
+    </div>
+
+</header>

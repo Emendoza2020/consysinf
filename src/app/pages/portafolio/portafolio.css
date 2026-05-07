@@ -1,0 +1,302 @@
+/* ======================================================
+   PORTAFOLIO PREMIUM EMPRESARIAL
+====================================================== */
+
+.portfolio-modern {
+    position: relative;
+    padding: 140px 8%;
+    background: radial-gradient(circle at top left, rgba(185, 28, 28, 0.18), transparent 30%), radial-gradient(circle at bottom right, rgba(250, 204, 21, 0.10), transparent 30%), #050505;
+    overflow: hidden;
+    color: white;
+}
+
+
+/* ======================================================
+   HEADER
+====================================================== */
+
+.portfolio-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+
+/* BADGE */
+
+.portfolio-badge {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    color: #facc15;
+    letter-spacing: 1px;
+    overflow: hidden;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* EFECTO SHINE */
+
+.portfolio-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: 0.8s;
+}
+
+.portfolio-badge:hover::before {
+    left: 120%;
+}
+
+
+/* TITULO */
+
+.portfolio-header h2 {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 3rem;
+    line-height: 1.1;
+    letter-spacing: -2px;
+}
+
+
+/* TEXTO GRADIENTE */
+
+.portfolio-header h2 span {
+    background: linear-gradient( 90deg, #facc15, #f59e0b);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+/* TEXTO */
+
+.portfolio-header p {
+    max-width: 850px;
+    margin: auto;
+    color: #d1d5db;
+    font-size: 1.2rem;
+    line-height: 1.9;
+}
+
+
+/* ======================================================
+   GRID
+====================================================== */
+
+.portfolio-grid {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+
+/* ======================================================
+   CARD
+====================================================== */
+
+.portfolio-card {
+    position: relative;
+    padding: 40px;
+    border-radius: 35px;
+    background: linear-gradient( 145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(18px);
+    overflow: hidden;
+    transition: 0.5s ease;
+}
+
+
+/* GLOW */
+
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 220px;
+    height: 220px;
+    background: rgba(250, 204, 21, 0.08);
+    border-radius: 50%;
+    filter: blur(70px);
+}
+
+
+/* HOVER */
+
+.portfolio-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    border-color: rgba(250, 204, 21, 0.25);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45), 0 0 30px rgba(250, 204, 21, 0.10);
+}
+
+
+/* DESTACADO */
+
+.portfolio-card.featured {
+    border: 1px solid rgba(250, 204, 21, 0.25);
+}
+
+
+/* ======================================================
+   TOP
+====================================================== */
+
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+
+/* ICON */
+
+.project-icon {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.3rem;
+    background: linear-gradient( 145deg, rgba(250, 204, 21, 0.18), rgba(185, 28, 28, 0.18));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.08), 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* NUMBER */
+
+.project-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.06);
+}
+
+
+/* ======================================================
+   CATEGORY
+====================================================== */
+
+.project-category {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #facc15;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* ======================================================
+   TITULO
+====================================================== */
+
+.portfolio-card h3 {
+    font-size: 2rem;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+
+/* ======================================================
+   TEXTO
+====================================================== */
+
+.portfolio-card p {
+    color: #d1d5db;
+    line-height: 1.9;
+    margin-bottom: 30px;
+    font-size: 1rem;
+}
+
+
+/* ======================================================
+   STACK
+====================================================== */
+
+.portfolio-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* TAG */
+
+.portfolio-stack span {
+    padding: 10px 16px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    color: #f3f4f6;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+
+/* HOVER TAG */
+
+.portfolio-stack span:hover {
+    background: rgba(250, 204, 21, 0.12);
+    color: #facc15;
+    transform: translateY(-3px);
+}
+
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media (max-width: 1200px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-modern {
+        padding: 90px 20px;
+    }
+    .portfolio-header h2 {
+        font-size: 2.6rem;
+    }
+    .portfolio-card {
+        padding: 30px;
+    }
+    .project-icon {
+        width: 75px;
+        height: 75px;
+        font-size: 1.8rem;
+    }
+    .project-number {
+        font-size: 2.5rem;
+    }
+    .portfolio-card h3 {
+        font-size: 1.5rem;
+    }
+}

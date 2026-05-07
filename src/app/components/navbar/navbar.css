@@ -1,0 +1,198 @@
+/* HEADER */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 20px;
+    transition: 0.4s;
+    background: transparent;
+}
+
+body {
+    padding-top: 80px;
+}
+
+
+/* SCROLL EFECTO */
+
+.header.scrolled {
+    background: rgba(127, 29, 29, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+}
+
+
+/* CONTENEDOR */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO */
+
+.logo {
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+
+/* NAV DESKTOP */
+
+.nav-desktop a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-desktop a:hover {
+    color: #facc15;
+}
+
+
+/* BOTÓN */
+
+.btn {
+    background: #facc15;
+    color: black;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+
+/* HAMBURGUESA */
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: white;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+
+/* ANIMACIÓN X */
+
+.menu-toggle.open span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* MENU MOBILE */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: linear-gradient(180deg, #b91c1c, #7f1d1d);
+    display: flex;
+    flex-direction: column;
+    padding: 80px 20px;
+    gap: 20px;
+    transform: translateX(100%);
+    transition: 0.4s;
+    z-index: 999;
+    padding: 40px 20px;
+    /* antes 80px → ahora más arriba */
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.mobile-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    /* menos espacio abajo */
+    margin-top: 10px;
+    /* opcional ajuste fino */
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-logo h3 {
+    color: #facc15;
+}
+
+
+/* IMAGEN */
+
+.mobile-logo img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* 🔥 hace el círculo */
+    object-fit: cover;
+    border: 3px solid #facc15;
+    /* estilo premium */
+    transition: 0.4s;
+}
+
+.mobile-logo img:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .nav-desktop {
+        display: none;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
